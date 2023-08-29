@@ -4,6 +4,7 @@ const {open} = require('sqlite');
 const sqlite3 = require('sqlite3');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const cors = require('cors');
 
 //Initializing express server
 const app = express();
@@ -13,6 +14,7 @@ const dbPath = path.join(__dirname, "youtubeClone.db");
 
 //Using middleware functions
 app.use(express.json());
+app.use(cors({ origin: "https://youtube-clone-nithish-m.vercel.app" }));
 
 let db = null;
 
