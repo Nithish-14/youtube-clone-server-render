@@ -4,7 +4,6 @@ const {open} = require('sqlite');
 const sqlite3 = require('sqlite3');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const cors = require('cors');
 
 //Initializing express server
 const app = express();
@@ -14,7 +13,6 @@ const dbPath = path.join(__dirname, "youtubeClone.db");
 
 //Using middleware functions
 app.use(express.json());
-app.use(cors({ origin: "https://youtube-clone-nithish.vercel.app" }));
 
 let db = null;
 
@@ -26,7 +24,7 @@ const initializeDbAndServer = async () => {
             driver: sqlite3.Database
         });
         app.listen(8080, () => {
-            console.log("Server Running at https://youtube-clone-ten-iota.vercel.app/");
+            console.log("Server Running at https://youtube-clone-ten-iota-delta.vercel.app//");
         });
     } catch(error) {
         console.log(`DB error: ${error.message}`);
