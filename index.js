@@ -14,7 +14,7 @@ const dbPath = path.join(__dirname, "youtubeClone.db");
 
 //Using middleware functions
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: "https://youtube-clone-nithish.vercel.app" }));
 
 let db = null;
 
@@ -26,7 +26,7 @@ const initializeDbAndServer = async () => {
             driver: sqlite3.Database
         });
         app.listen(8080, () => {
-            console.log("Server Running at http://localhost:8080/");
+            console.log("Server Running at https://youtube-clone-ten-iota.vercel.app/");
         });
     } catch(error) {
         console.log(`DB error: ${error.message}`);
