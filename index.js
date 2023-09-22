@@ -14,7 +14,7 @@ const dbPath = path.join(__dirname, "youtubeClone.db");
 
 //Using middleware functions
 app.use(express.json());
-app.use(cors({ origin: "https://youtube-clone-nithish-mnl.vercel.app", credentials: true }));
+app.use(cors());
 
 let db = null;
 
