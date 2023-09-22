@@ -62,7 +62,7 @@ const authenticator = (request, response, next) => {
 
 //Test API
 app.get("/", (request, response) => {
-    response.send("Successfully Deployed a")
+    response.send("Successfully Deployed in render")
 })
 
 //Create User API
